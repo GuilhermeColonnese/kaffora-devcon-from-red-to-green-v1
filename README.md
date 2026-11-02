@@ -1,10 +1,10 @@
 # From Red to Green · Liferay DevCon 2026 workshop kit
 
-**Improving SEO, Accessibility, Performance and Agentic Browsing scores with Liferay DXP Free Tier.**
+**Improving SEO, Accessibility, Performance and Agentic Browsing scores with Liferay DXP.**
 
 A deliberately broken Liferay DXP site, **Kaffora Coffee** (a fictional specialty-coffee store), with real gaps in all five Lighthouse 13 categories, plus everything you need to take it from red to green with native Liferay features: Adaptive Media, Style Books, fragment configuration, client extensions, page SEO settings, `llms.txt`, the MCP Server, production properties and a CDN.
 
-Built for a 40-minute, hands-on session at Liferay DevCon 2026. Everything runs locally on **Liferay DXP Free Tier 2026.Q3** with a free activation key, on macOS, Windows and Linux.
+Built for a 40-minute, hands-on session at Liferay DevCon 2026. Everything runs locally on **Liferay DXP 2026.Q3** with a free activation key, on macOS, Windows and Linux.
 
 | | Performance | Accessibility | Best Practices | SEO | Agentic Browsing | LCP |
 |---|---|---|---|---|---|---|
@@ -33,7 +33,7 @@ Built for a 40-minute, hands-on session at Liferay DevCon 2026. Everything runs 
 | Docker (8 GB RAM for containers) | Docker Desktop | Docker Desktop (WSL 2 backend) | Docker Engine + Compose plugin |
 | Node.js 22+ | `brew install node@22` | `winget install OpenJS.NodeJS.LTS` | `nvm install 22` |
 | Google Chrome | `brew install --cask google-chrome` | `winget install Google.Chrome` | `google-chrome-stable` |
-| Liferay DXP Free Tier key | free at [marketplace.liferay.com/p/liferay-dxp-free-tier](https://marketplace.liferay.com/p/liferay-dxp-free-tier), domain `localhost` | same | same |
+| Liferay DXP key | free at [marketplace.liferay.com/p/liferay-dxp-free-tier](https://marketplace.liferay.com/p/liferay-dxp-free-tier), domain `localhost` | same | same |
 
 ## Quick start
 
