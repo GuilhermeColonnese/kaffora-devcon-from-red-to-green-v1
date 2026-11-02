@@ -1,0 +1,362 @@
+[
+ {
+  "category": "Performance",
+  "audit": "render-blocking-insight",
+  "finding": "Render-blocking CSS/JS delays first paint",
+  "fix": "Production defaults: theme.css.fast.load on, minifier on (never include portal-developer.properties in prod). Remove @import from page-set CSS.",
+  "where": "portal-ext.properties · Pages ⚙ → Look and Feel → CSS",
+  "seeded": true
+ },
+ {
+  "category": "Performance",
+  "audit": "image-delivery-insight",
+  "finding": "Images are oversized or not compressed",
+  "fix": "Select images from Documents and Media so Adaptive Media serves <picture>/srcset renditions. Define resolutions that match your breakpoints and run Adapt All Images.",
+  "where": "Control Panel → Adaptive Media · Page Editor → Image Source: Direct",
+  "seeded": true
+ },
+ {
+  "category": "Performance",
+  "audit": "lcp-discovery-insight",
+  "finding": "LCP image not discoverable, lazy-loaded or not prioritized",
+  "fix": "Keep the LCP image eager (Enable Lazy Loading off). Put it in the initial HTML (fragment editable, not injected by JS).",
+  "where": "Page Editor → image → Enable Lazy Loading",
+  "seeded": true
+ },
+ {
+  "category": "Performance",
+  "audit": "lcp-breakdown-insight",
+  "finding": "Where LCP time goes (TTFB, load delay, render delay)",
+  "fix": "Reduce TTFB with fragment caching (\"cacheable\" fragments), production caches and the Page Audit panel's render times per fragment.",
+  "where": "Page Editor → Page Audit · fragment.json cacheable",
+  "seeded": false
+ },
+ {
+  "category": "Performance",
+  "audit": "cache-insight",
+  "finding": "Static resources have short or no cache lifetime",
+  "fix": "Don't disable the Header/ETag filters (developer mode does). Put a CDN with origin pull in front.",
+  "where": "portal-ext.properties · Instance Settings → General → CDN Host",
+  "seeded": true
+ },
+ {
+  "category": "Performance",
+  "audit": "document-latency-insight",
+  "finding": "Slow document: redirects, server response, no compression",
+  "fix": "Compress at the proxy/CDN, or turn on com.liferay.portal.servlet.filters.gzip.GZipFilter (it's off by default). Serve the site on its virtual host to avoid redirect hops.",
+  "where": "portal-ext.properties · Site Settings → Site URL",
+  "seeded": true
+ },
+ {
+  "category": "Performance",
+  "audit": "font-display-insight",
+  "finding": "Web fonts block text rendering",
+  "fix": "Declare fonts through Style Book tokens. Self-host with font-display: swap, or use a system font stack.",
+  "where": "Design → Style Books → Typography",
+  "seeded": true
+ },
+ {
+  "category": "Performance",
+  "audit": "network-dependency-tree-insight",
+  "finding": "Long critical request chains",
+  "fix": "Avoid CSS @import chains and JS that loads more JS. Use preconnect only for real third parties.",
+  "where": "Pages ⚙ → CSS / JavaScript",
+  "seeded": true
+ },
+ {
+  "category": "Performance",
+  "audit": "cls-culprits-insight",
+  "finding": "Layout shifts: unsized images, injected content, web fonts",
+  "fix": "Adaptive Media outputs width/height. Never inject banners at the top via JS. Use a page fragment (reserved space) or the native cookie banner (overlay).",
+  "where": "Page Editor · Instance Settings → Cookies",
+  "seeded": true
+ },
+ {
+  "category": "Performance",
+  "audit": "third-parties-insight",
+  "finding": "Third-party code blocks the main thread",
+  "fix": "Move tags from the free-text JavaScript field to a JavaScript client extension (async/defer, versioned, scoped).",
+  "where": "Client extensions → Global JS",
+  "seeded": true
+ },
+ {
+  "category": "Performance",
+  "audit": "legacy-javascript-insight · duplicated-javascript-insight",
+  "finding": "Polyfills/legacy or duplicated JS bundles",
+  "fix": "Build custom JS as client extensions that share Liferay's import maps (React, Clay) instead of bundling their own copies.",
+  "where": "Client extensions · import maps",
+  "seeded": true
+ },
+ {
+  "category": "Performance",
+  "audit": "dom-size-insight",
+  "finding": "Excessive DOM size",
+  "fix": "Paginate collections and Asset Publishers. Limit items per page and avoid nested grids inside collection items.",
+  "where": "Page Editor → Collection Display → Pagination",
+  "seeded": false
+ },
+ {
+  "category": "Performance",
+  "audit": "modern-http-insight",
+  "finding": "Resources not served over HTTP/2+",
+  "fix": "Terminate TLS with HTTP/2 or HTTP/3 at the reverse proxy or CDN (Liferay SaaS/PaaS do this at the edge).",
+  "where": "Web server / CDN",
+  "seeded": false
+ },
+ {
+  "category": "Performance",
+  "audit": "viewport-insight",
+  "finding": "Tap delay because the viewport isn't optimized for mobile",
+  "fix": "Keep the theme's width=device-width viewport meta tag. Don't override it in themes or client extensions.",
+  "where": "Theme",
+  "seeded": false
+ },
+ {
+  "category": "Accessibility",
+  "audit": "color-contrast",
+  "finding": "Text contrast below WCAG AA (4.5:1)",
+  "fix": "Fix colours once in the Style Book (Primary/Secondary tokens) so every fragment inherits them.",
+  "where": "Design → Style Books",
+  "seeded": true
+ },
+ {
+  "category": "Accessibility",
+  "audit": "image-alt",
+  "finding": "Images without alt text",
+  "fix": "Fill in Image Description on image editables and D&M files. Leave it empty only for decorative images (alt=\"\").",
+  "where": "Page Editor → image → Image Description",
+  "seeded": true
+ },
+ {
+  "category": "Accessibility",
+  "audit": "button-name · link-name",
+  "finding": "Icon-only buttons/links without an accessible name",
+  "fix": "Expose aria-label as fragment configuration so authors set it without touching HTML.",
+  "where": "Page Editor → fragment → Configuration",
+  "seeded": true
+ },
+ {
+  "category": "Accessibility",
+  "audit": "label",
+  "finding": "Form fields without labels",
+  "fix": "Use Liferay Forms or Object form fragments (labels by default). In custom fragments, make the label configurable.",
+  "where": "Page Editor · Forms · Objects",
+  "seeded": true
+ },
+ {
+  "category": "Accessibility",
+  "audit": "heading-order",
+  "finding": "Heading levels skip (h1 → h4)",
+  "fix": "Set the Heading fragment's level for document structure. Control visual size with styles, not levels.",
+  "where": "Heading fragment → Configuration → Heading Level",
+  "seeded": true
+ },
+ {
+  "category": "Accessibility",
+  "audit": "html-has-lang · valid-lang",
+  "finding": "Missing or invalid document language",
+  "fix": "Configure site languages. Liferay writes lang on <html> per locale.",
+  "where": "Site Settings → Localization",
+  "seeded": false
+ },
+ {
+  "category": "Accessibility",
+  "audit": "frame-title · video-caption",
+  "finding": "Embeds without titles/captions",
+  "fix": "Give External Video fragments a title. Provide captions on hosted video.",
+  "where": "Page Editor → Video fragment",
+  "seeded": false
+ },
+ {
+  "category": "Accessibility",
+  "audit": "bypass (skip link) · landmarks",
+  "finding": "No way to skip repeated content",
+  "fix": "Keep the theme's skip-to-content link and main landmark. Label nav landmarks via fragment configuration.",
+  "where": "Theme · fragment configuration",
+  "seeded": true
+ },
+ {
+  "category": "Best Practices",
+  "audit": "errors-in-console",
+  "finding": "Errors logged to the console",
+  "fix": "Remove dead snippets from the page-set JavaScript field. Monitor client extensions in each release.",
+  "where": "Pages ⚙ → Advanced → JavaScript",
+  "seeded": true
+ },
+ {
+  "category": "Best Practices",
+  "audit": "geolocation-on-start · notification-on-start",
+  "finding": "Permission prompts on page load",
+  "fix": "Ask for permissions only after a user action, inside a client extension. Never in the global JS field.",
+  "where": "Client extensions",
+  "seeded": true
+ },
+ {
+  "category": "Best Practices",
+  "audit": "paste-preventing-inputs",
+  "finding": "Inputs block pasting",
+  "fix": "Remove paste blockers. Use Liferay Forms validation and CAPTCHA instead.",
+  "where": "Pages ⚙ → JavaScript · Forms",
+  "seeded": true
+ },
+ {
+  "category": "Best Practices",
+  "audit": "csp-xss (unscored)",
+  "finding": "No effective Content Security Policy",
+  "fix": "Enable CSP with the [$NONCE$] placeholder. Start in Report Only mode, then enforce.",
+  "where": "Instance Settings → Security → Content Security Policy",
+  "seeded": true
+ },
+ {
+  "category": "Best Practices",
+  "audit": "has-hsts · origin-isolation · clickjacking-mitigation (unscored)",
+  "finding": "Missing HSTS/COOP/frame protections",
+  "fix": "Keep http.header.secure.x.frame.options on. Set HSTS/COOP at the proxy or CDN.",
+  "where": "portal-ext.properties · web server",
+  "seeded": false
+ },
+ {
+  "category": "Best Practices",
+  "audit": "is-on-https · redirects-http",
+  "finding": "Not served over HTTPS",
+  "fix": "Terminate TLS at the proxy and set web.server.protocol=https so Liferay generates https URLs.",
+  "where": "portal-ext.properties · proxy",
+  "seeded": false
+ },
+ {
+  "category": "Best Practices",
+  "audit": "image-aspect-ratio · image-size-responsive",
+  "finding": "Distorted or low-resolution images",
+  "fix": "Let Adaptive Media pick resolutions per viewport. Define a high-density (2x) resolution where needed.",
+  "where": "Control Panel → Adaptive Media",
+  "seeded": false
+ },
+ {
+  "category": "Best Practices",
+  "audit": "third-party-cookies",
+  "finding": "Third-party cookies in use",
+  "fix": "Use the native cookie consent banner and categorize cookies. Load tags only after consent.",
+  "where": "Instance Settings → Cookies",
+  "seeded": false
+ },
+ {
+  "category": "SEO",
+  "audit": "is-crawlable",
+  "finding": "Page blocked from indexing (noindex / robots)",
+  "fix": "Clear staging robots directives before go-live. Audit Robots per page and in robots.txt.",
+  "where": "Pages → Configure → SEO → Robots",
+  "seeded": true
+ },
+ {
+  "category": "SEO",
+  "audit": "meta-description · document-title",
+  "finding": "Missing description / generic title",
+  "fix": "Set HTML Title and Description per page. On Display Page Templates, map them to content fields.",
+  "where": "Pages → Configure → SEO · Display Page Template → SEO",
+  "seeded": true
+ },
+ {
+  "category": "SEO",
+  "audit": "robots-txt",
+  "finding": "robots.txt is invalid",
+  "fix": "Maintain robots.txt per page set with [$PROTOCOL$]/[$HOST$]/[$PORT$] placeholders and a Sitemap line.",
+  "where": "Pages ⚙ → Advanced → Robots",
+  "seeded": true
+ },
+ {
+  "category": "SEO",
+  "audit": "link-text",
+  "finding": "Links like \"click here\" / \"read more\"",
+  "fix": "Make link text editable in fragments and write descriptive text in the Page Editor.",
+  "where": "Page Editor",
+  "seeded": true
+ },
+ {
+  "category": "SEO",
+  "audit": "canonical",
+  "finding": "Invalid or conflicting canonical URL",
+  "fix": "Keep Liferay's default absolute canonical. Use a custom canonical only for real duplicates. Pick the localized-URL strategy per instance.",
+  "where": "Pages → Configure → SEO · Instance Settings → Pages → SEO",
+  "seeded": false
+ },
+ {
+  "category": "SEO",
+  "audit": "hreflang",
+  "finding": "Invalid alternate language links",
+  "fix": "Liferay generates hreflang per available language. Enable translated-pages-only to avoid pointing at untranslated pages.",
+  "where": "Instance Settings → Pages → SEO",
+  "seeded": false
+ },
+ {
+  "category": "SEO",
+  "audit": "http-status-code · crawlable-anchors",
+  "finding": "Error status or non-crawlable links",
+  "fix": "Use real <a href> links in navigation fragments. Track 404s and create 301s in Redirection.",
+  "where": "Site Menu → Configuration → Redirection",
+  "seeded": false
+ },
+ {
+  "category": "SEO",
+  "audit": "structured-data (manual)",
+  "finding": "No machine-readable entity data",
+  "fix": "Reusable JSON-LD fragment (Organization/Product/Article), mapped to structure fields on Display Page Templates.",
+  "where": "Fragments · Display Page Templates",
+  "seeded": true
+ },
+ {
+  "category": "SEO",
+  "audit": "(sitemap, not audited)",
+  "finding": "Search engines can't discover all URLs",
+  "fix": "Enable the XML sitemap per content type. In 2026.Q3, schedule cached generation for large sites.",
+  "where": "Instance Settings → SEO → XML Sitemap",
+  "seeded": true
+ },
+ {
+  "category": "Agentic Browsing",
+  "audit": "llms-txt",
+  "finding": "llms.txt missing required H1, links or length",
+  "fix": "Enable the native llms.txt (2026.Q3 beta, flag LPD-80518) per site or instance and write curated Markdown: H1, summary, sections with links.",
+  "where": "Site Settings → SEO → llms.txt",
+  "seeded": true
+ },
+ {
+  "category": "Agentic Browsing",
+  "audit": "agent-accessibility-tree",
+  "finding": "Accessibility tree not well-formed for agents",
+  "fix": "Same levers as accessibility: names, labels, landmarks and ARIA validity through Style Books and fragment configuration.",
+  "where": "Page Editor · Style Books",
+  "seeded": true
+ },
+ {
+  "category": "Agentic Browsing",
+  "audit": "cumulative-layout-shift",
+  "finding": "Layout moves under an agent taking screenshots",
+  "fix": "Reserve space for all content at render time. No JS-injected banners.",
+  "where": "Page Editor · Cookies banner",
+  "seeded": true
+ },
+ {
+  "category": "Agentic Browsing",
+  "audit": "webmcp-form-coverage · webmcp-registered-tools · webmcp-schema-validity (weight 0)",
+  "finding": "Forms not exposed as agent tools",
+  "fix": "Offer a fragment configuration toggle that adds WebMCP declarative attributes (toolname, tooldescription, toolparamdescription).",
+  "where": "Page Editor → fragment → Configuration",
+  "seeded": true
+ },
+ {
+  "category": "Agentic Browsing",
+  "audit": "ard-schema (weight 0, Lighthouse 13.5)",
+  "finding": "No ai-catalog.json for agent resource discovery",
+  "fix": "Keep an eye on the Agentic Resource Discovery spec. There's no native DXP feature yet.",
+  "where": "Watch item",
+  "seeded": false
+ },
+ {
+  "category": "Agentic Browsing",
+  "audit": "(server-side, not audited)",
+  "finding": "Agents need structured, permissioned access to content",
+  "fix": "Enable Liferay's MCP Server (/o/mcp, flag LPD-63311). Agents act with the authenticated user's permissions.",
+  "where": "Instance Settings → Platform → MCP Server",
+  "seeded": true
+ }
+]

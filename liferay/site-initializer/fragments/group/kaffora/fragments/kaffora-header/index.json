@@ -1,0 +1,33 @@
+{
+	"fieldSets": [
+		{
+			"label": "Accessibility",
+			"fields": [
+				{
+					"dataType": "string",
+					"defaultValue": "",
+					"label": "Search button accessible name",
+					"name": "searchButtonLabel",
+					"type": "text",
+					"description": "Announced by screen readers and AI agents, e.g. 'Search coffees'."
+				},
+				{
+					"dataType": "string",
+					"defaultValue": "",
+					"label": "Cart button accessible name",
+					"name": "cartButtonLabel",
+					"type": "text",
+					"description": "e.g. 'Open cart'."
+				},
+				{
+					"dataType": "string",
+					"defaultValue": "",
+					"label": "Navigation landmark label",
+					"name": "navLabel",
+					"type": "text",
+					"description": "e.g. 'Main'."
+				}
+			]
+		}
+	]
+}

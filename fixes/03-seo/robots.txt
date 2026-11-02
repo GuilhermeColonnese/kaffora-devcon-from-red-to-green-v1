@@ -1,0 +1,4 @@
+User-Agent: *
+Disallow:
+
+Sitemap: [$PROTOCOL$]://[$HOST$]:[$PORT$]/sitemap.xml

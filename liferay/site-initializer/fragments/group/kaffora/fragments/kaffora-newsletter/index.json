@@ -1,0 +1,38 @@
+{
+	"fieldSets": [
+		{
+			"label": "Accessibility",
+			"fields": [
+				{
+					"dataType": "string",
+					"defaultValue": "",
+					"label": "E-mail field label",
+					"name": "fieldLabel",
+					"type": "text",
+					"description": "Visible label for the e-mail input, e.g. 'E-mail address'."
+				}
+			]
+		},
+		{
+			"label": "Agentic browsing (WebMCP)",
+			"fields": [
+				{
+					"defaultValue": false,
+					"label": "Expose this form to AI agents (WebMCP declarative API)",
+					"name": "exposeWebMCP",
+					"type": "checkbox",
+					"typeOptions": {
+						"displayType": "toggle"
+					}
+				},
+				{
+					"dataType": "string",
+					"defaultValue": "Subscribe an e-mail address to the Kaffora Coffee monthly roasts newsletter.",
+					"label": "Tool description for agents",
+					"name": "webMCPDescription",
+					"type": "text"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,118 @@
+:root {
+	--kaffora-navy: #07082B;
+	--kaffora-surface: #13153A;
+	--kaffora-line: #3A3D78;
+	--kaffora-purple: #7B1FFF;
+	--kaffora-magenta: #E4169B;
+	--kaffora-gradient: linear-gradient(100deg, #07082B 0%, #1B0B5E 40%, #6A12D6 72%, #C21BC0 100%);
+}
+.kaffora-btn {
+	background: var(--primary, #C2107F);
+	border: 0;
+	border-radius: 8px;
+	color: #FFFFFF;
+	display: inline-block;
+	font-family: var(--font-family-base, system-ui, sans-serif);
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 1.2;
+	padding: 0.7rem 1.5rem;
+	text-decoration: none;
+}
+
+.kaffora-btn:hover,
+.kaffora-btn:focus-visible {
+	color: #FFFFFF;
+	filter: brightness(1.1);
+	text-decoration: none;
+}
+
+.kaffora-btn--light {
+	background: #FFFFFF;
+	color: var(--primary, #C2107F);
+}
+
+.kaffora-btn--light:hover,
+.kaffora-btn--light:focus-visible {
+	color: var(--primary, #C2107F);
+}
+.kaffora-header {
+	background: linear-gradient(90deg, #07082B 0%, #1B0B5E 60%, #5B12C9 100%);
+	color: #FFFFFF;
+	font-family: var(--font-family-base, system-ui, sans-serif);
+}
+
+.kaffora-header__inner {
+	align-items: center;
+	display: flex;
+	gap: 2rem;
+	margin: 0 auto;
+	max-width: 1280px;
+	min-height: 64px;
+	padding: 0 1.25rem;
+}
+
+.kaffora-header__logo {
+	display: block;
+	height: 36px;
+	width: auto;
+}
+
+.kaffora-header__nav {
+	display: flex;
+	flex: 1;
+	font-family: var(--font-family-monospace, ui-monospace, monospace);
+	font-size: 0.875rem;
+	gap: 1.5rem;
+	justify-content: flex-end;
+}
+
+.kaffora-header__nav a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.kaffora-header__nav a:hover,
+.kaffora-header__nav a:focus-visible {
+	text-decoration: underline;
+}
+
+.kaffora-header__actions {
+	align-items: center;
+	display: flex;
+	gap: 0.25rem;
+}
+
+.kaffora-header__cta {
+	font-size: 0.875rem;
+	margin-left: 0.5rem;
+	padding: 0.5rem 1rem;
+}
+
+.kaffora-icon-btn {
+	align-items: center;
+	background: transparent;
+	border: 0;
+	border-radius: 50%;
+	color: #FFFFFF;
+	display: inline-flex;
+	height: 44px;
+	justify-content: center;
+	width: 44px;
+}
+
+.kaffora-icon-btn:hover,
+.kaffora-icon-btn:focus-visible {
+	background: rgba(255, 255, 255, 0.12);
+}
+
+@media (max-width: 767px) {
+	.kaffora-header .kaffora-header__nav,
+	.kaffora-header .kaffora-header__cta {
+		display: none;
+	}
+
+	.kaffora-header__actions {
+		margin-left: auto;
+	}
+}

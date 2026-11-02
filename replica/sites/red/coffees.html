@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html class="ltr" dir="ltr" lang="en-US"><head><meta charset="utf-8"><meta content="initial-scale=1.0, width=device-width" name="viewport"><title>Home - Kaffora Coffee</title><meta content="noindex, nofollow" name="robots"><link href="http://localhost:8101/home" rel="canonical"><link href="/o/classic-theme/css/clay.css" rel="stylesheet"><link href="/o/classic-theme/css/main.css" rel="stylesheet"><link href="/o/classic-theme/css/portal.css" rel="stylesheet"><link href="/o/classic-theme/css/taglib.css" rel="stylesheet"><script src="/o/frontend-js-web/aui.js"></script><script src="/o/frontend-js-web/liferay.js"></script><script src="/o/frontend-js-web/loader.js"></script><style>:root{--black:#000;--blockquote-font-size:var(--font-size-large);--blockquote-small-color:var(--gray-600);--body-bg:#07082B;--body-color:#FFFFFF;--box-shadow:0 .5rem 1rem rgba(0,0,0,0.1);--box-shadow-lg:0 1rem 2.25rem rgba(0,0,0,0.15);--box-shadow-sm:0 .125rem .25rem rgba(0,0,0,0.1);--brand-color-1:#8E2D7A;--brand-color-2:#7B1FFF;--brand-color-3:#13153A;--brand-color-4:#07082B;--btn-link-color:var(--primary);--btn-link-hover-color:var(--primary);--btn-outline-primary-border-color:var(--primary);--btn-outline-primary-color:var(--primary);--btn-outline-primary-hover-background-color:var(--white);--btn-outline-primary-hover-border-color:var(--primary);--btn-outline-primary-hover-color:var(--primary);--btn-outline-secondary-border-color:var(--brand-color-1);--btn-outline-secondary-color:var(--brand-color-1);--btn-outline-secondary-hover-background-color:var(--white);--btn-outline-secondary-hover-border-color:var(--brand-color-1);--btn-outline-secondary-hover-color:var(--brand-color-1);--btn-primary-background-color:var(--primary);--btn-primary-border-color:var(--primary);--btn-primary-color:var(--white);--btn-primary-hover-background-color:var(--primary);--btn-primary-hover-border-color:var(--primary);--btn-primary-hover-color:var(--white);--btn-secondary-background-color:var(--brand-color-1);--btn-secondary-border-color:var(--brand-color-1);--btn-secondary-color:var(--primary);--btn-secondary-hover-background-color:var(--brand-color-1);--btn-secondary-hover-border-color:var(--brand-color-1);--btn-secondary-hover-color:var(--primary);--dark:var(--gray-900);--display1-size:6rem;--display1-weight:400;--display2-size:4.5rem;--display2-weight:400;--display3-size:4rem;--display3-weight:400;--display4-size:3.25rem;--display4-weight:400;--display-line-height:1.1;--font-family-base:'Source Sans 3', sans-serif;--font-family-monospace:'JetBrains Mono', monospace;--font-family-sans-serif:'Source Sans 3', sans-serif;--font-size-base:1rem;--font-size-lg:1.25rem;--font-size-sm:0.875rem;--font-weight-bold:600;--font-weight-bolder:600;--gray-dark:var(--gray-800);--h1-font-size:2.75rem;--h2-font-size:2.5rem;--h3-font-size:1.875rem;--h4-font-size:1.65rem;--h5-font-size:1.35rem;--h6-font-size:1rem;--light:var(--gray-200);--lighter:var(--gray-100);--primary:#FF8ADF;--secondary:#5E6190;--spacer-0:0;--spacer-1:0.5rem;--spacer-2:0.75rem;--spacer-3:1.5rem;--spacer-4:2rem;--spacer-5:3rem;--spacer-6:4rem;--spacer-7:5rem;--spacer-8:7rem;--spacer-9:8.5rem;--success:#4AAB3B;--text-muted:var(--gray-500)}
+body{background:var(--body-bg);color:var(--body-color);font-family:var(--font-family-base);margin:0}
+.kaffora-section{margin:0 auto;max-width:1040px;padding:4.5rem 1.25rem}
+.kaffora-section .component-heading{font-weight:700;margin-bottom:3rem;text-align:center}
+.kaffora-grid{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+:root {
+	--kaffora-navy: #07082B;
+	--kaffora-surface: #13153A;
+	--kaffora-line: #3A3D78;
+	--kaffora-purple: #7B1FFF;
+	--kaffora-magenta: #E4169B;
+	--kaffora-gradient: linear-gradient(100deg, #07082B 0%, #1B0B5E 40%, #6A12D6 72%, #C21BC0 100%);
+}
+.kaffora-about {
+	background: var(--kaffora-navy);
+	color: #FFFFFF;
+	font-family: var(--font-family-base, system-ui, sans-serif);
+	padding: 3.5rem 1.25rem;
+}
+
+.kaffora-about__inner {
+	align-items: start;
+	display: grid;
+	gap: 2rem;
+	margin: 0 auto;
+	max-width: 1040px;
+}
+
+@media (min-width: 992px) {
+	.kaffora-about__inner {
+		grid-template-columns: 1fr 260px 1fr;
+	}
+}
+
+.kaffora-about__label {
+	color: var(--brand-color-1, #FF5CCB);
+	font-size: 1rem;
+	font-weight: 700;
+	margin: 0 0 1rem;
+}
+
+.kaffora-about__text p {
+	font-size: 0.9375rem;
+	margin: 0 0 1rem;
+}
+
+.kaffora-about__art {
+	aspect-ratio: 1;
+	justify-self: center;
+	max-width: 260px;
+	width: 100%;
+	background: radial-gradient(circle at 70% 25%, #C21BC0 0%, #5B12C9 45%, #13153A 80%);
+	border-radius: 4px;
+	overflow: hidden;
+	position: relative;
+}
+
+.kaffora-about__disc {
+	background: linear-gradient(135deg, #E9E6FF, #8D86E8);
+	border-radius: 50%;
+	bottom: -30px;
+	height: 150px;
+	left: -20px;
+	position: absolute;
+	width: 150px;
+}
+
+.kaffora-about__bar {
+	background: linear-gradient(160deg, #FFC4F7, #C43BDF);
+	border-radius: 10px;
+	height: 150px;
+	position: absolute;
+	right: 30px;
+	top: 20px;
+	transform: rotate(35deg);
+	width: 44px;
+}
+
+.kaffora-about__dot {
+	background: #FFFFFF;
+	border-radius: 50%;
+	height: 40px;
+	left: 90px;
+	position: absolute;
+	top: 80px;
+	width: 40px;
+}
+:root {
+	--kaffora-navy: #07082B;
+	--kaffora-surface: #13153A;
+	--kaffora-line: #3A3D78;
+	--kaffora-purple: #7B1FFF;
+	--kaffora-magenta: #E4169B;
+	--kaffora-gradient: linear-gradient(100deg, #07082B 0%, #1B0B5E 40%, #6A12D6 72%, #C21BC0 100%);
+}
+.kaffora-btn {
+	background: var(--primary, #C2107F);
+	border: 0;
+	border-radius: 8px;
+	color: #FFFFFF;
+	display: inline-block;
+	font-family: var(--font-family-base, system-ui, sans-serif);
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 1.2;
+	padding: 0.7rem 1.5rem;
+	text-decoration: none;
+}
+
+.kaffora-btn:hover,
+.kaffora-btn:focus-visible {
+	color: #FFFFFF;
+	filter: brightness(1.1);
+	text-decoration: none;
+}
+
+.kaffora-btn--light {
+	background: #FFFFFF;
+	color: var(--primary, #C2107F);
+}
+
+.kaffora-btn--light:hover,
+.kaffora-btn--light:focus-visible {
+	color: var(--primary, #C2107F);
+}
+.kaffora-footer {
+	background: var(--kaffora-navy);
+	color: #FFFFFF;
+	font-family: var(--font-family-base, system-ui, sans-serif);
+	padding: 3rem 1.25rem 2rem;
+	text-align: center;
+}
+
+.kaffora-footer__inner {
+	margin: 0 auto;
+	max-width: 1040px;
+}
+
+.kaffora-footer__title {
+	font-size: 2rem;
+	font-weight: 700;
+	margin: 0 0 1.25rem;
+}
+
+.kaffora-footer__legal {
+	color: var(--secondary, #C7C9EA);
+	font-size: 0.9375rem;
+	margin: 1.5rem 0 2.5rem;
+}
+
+.kaffora-footer__legal a {
+	color: var(--brand-color-1, #FF5CCB);
+	text-decoration: underline;
+}
+
+.kaffora-footer__bottom {
+	align-items: center;
+	border-top: 1px solid var(--kaffora-line);
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	justify-content: space-between;
+	padding-top: 1.25rem;
+}
+
+.kaffora-footer__brand {
+	font-family: var(--font-family-monospace, ui-monospace, monospace);
+	font-size: 1.5rem;
+	font-weight: 800;
+}
+
+.kaffora-footer__social {
+	display: flex;
+	gap: 0.25rem;
+}
+
+.kaffora-footer__social a {
+	align-items: center;
+	color: #FFFFFF;
+	display: inline-flex;
+	height: 44px;
+	justify-content: center;
+	width: 44px;
+}
+:root {
+	--kaffora-navy: #07082B;
+	--kaffora-surface: #13153A;
+	--kaffora-line: #3A3D78;
+	--kaffora-purple: #7B1FFF;
+	--kaffora-magenta: #E4169B;
+	--kaffora-gradient: linear-gradient(100deg, #07082B 0%, #1B0B5E 40%, #6A12D6 72%, #C21BC0 100%);
+}
+.kaffora-btn {
+	background: var(--primary, #C2107F);
+	border: 0;
+	border-radius: 8px;
+	color: #FFFFFF;
+	display: inline-block;
+	font-family: var(--font-family-base, system-ui, sans-serif);
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 1.2;
+	padding: 0.7rem 1.5rem;
+	text-decoration: none;
+}
+
+.kaffora-btn:hover,
+.kaffora-btn:focus-visible {
+	color: #FFFFFF;
+	filter: brightness(1.1);
+	text-decoration: none;
+}
+
+.kaffora-btn--light {
+	background: #FFFFFF;
+	color: var(--primary, #C2107F);
+}
+
+.kaffora-btn--light:hover,
+.kaffora-btn--light:focus-visible {
+	color: var(--primary, #C2107F);
+}
+.kaffora-header {
+	background: linear-gradient(90deg, #07082B 0%, #1B0B5E 60%, #5B12C9 100%);
+	color: #FFFFFF;
+	font-family: var(--font-family-base, system-ui, sans-serif);
+}
+
+.kaffora-header__inner {
+	align-items: center;
+	display: flex;
+	gap: 2rem;
+	margin: 0 auto;
+	max-width: 1280px;
+	min-height: 64px;
+	padding: 0 1.25rem;
+}
+
+.kaffora-header__logo {
+	display: block;
+	height: 36px;
+	width: auto;
+}
+
+.kaffora-header__nav {
+	display: flex;
+	flex: 1;
+	font-family: var(--font-family-monospace, ui-monospace, monospace);
+	font-size: 0.875rem;
+	gap: 1.5rem;
+	justify-content: flex-end;
+}
+
+.kaffora-header__nav a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.kaffora-header__nav a:hover,
+.kaffora-header__nav a:focus-visible {
+	text-decoration: underline;
+}
+
+.kaffora-header__actions {
+	align-items: center;
+	display: flex;
+	gap: 0.25rem;
+}
+
+.kaffora-header__cta {
+	font-size: 0.875rem;
+	margin-left: 0.5rem;
+	padding: 0.5rem 1rem;
+}
+
+.kaffora-icon-btn {
+	align-items: center;
+	background: transparent;
+	border: 0;
+	border-radius: 50%;
+	color: #FFFFFF;
+	display: inline-flex;
+	height: 44px;
+	justify-content: center;
+	width: 44px;
+}
+
+.kaffora-icon-btn:hover,
+.kaffora-icon-btn:focus-visible {
+	background: rgba(255, 255, 255, 0.12);
+}
+
+@media (max-width: 767px) {
+	.kaffora-header .kaffora-header__nav,
+	.kaffora-header .kaffora-header__cta {
+		display: none;
+	}
+
+	.kaffora-header__actions {
+		margin-left: auto;
+	}
+}
+:root {
+	--kaffora-navy: #07082B;
+	--kaffora-surface: #13153A;
+	--kaffora-line: #3A3D78;
+	--kaffora-purple: #7B1FFF;
+	--kaffora-magenta: #E4169B;
+	--kaffora-gradient: linear-gradient(100deg, #07082B 0%, #1B0B5E 40%, #6A12D6 72%, #C21BC0 100%);
+}
+.kaffora-btn {
+	background: var(--primary, #C2107F);
+	border: 0;
+	border-radius: 8px;
+	color: #FFFFFF;
+	display: inline-block;
+	font-family: var(--font-family-base, system-ui, sans-serif);
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 1.2;
+	padding: 0.7rem 1.5rem;
+	text-decoration: none;
+}
+
+.kaffora-btn:hover,
+.kaffora-btn:focus-visible {
+	color: #FFFFFF;
+	filter: brightness(1.1);
+	text-decoration: none;
+}
+
+.kaffora-btn--light {
+	background: #FFFFFF;
+	color: var(--primary, #C2107F);
+}
+
+.kaffora-btn--light:hover,
+.kaffora-btn--light:focus-visible {
+	color: var(--primary, #C2107F);
+}
+.kaffora-hero {
+	background: var(--kaffora-navy);
+	color: #FFFFFF;
+	font-family: var(--font-family-base, system-ui, sans-serif);
+}
+
+.kaffora-hero__intro {
+	background: var(--kaffora-gradient);
+	overflow: hidden;
+	padding: 5.5rem 1.25rem 6rem;
+	position: relative;
+	text-align: center;
+}
+
+.kaffora-hero__copy {
+	margin: 0 auto;
+	max-width: 880px;
+	position: relative;
+}
+
+.kaffora-hero__title {
+	font-family: var(--font-family-monospace, ui-monospace, monospace);
+	font-size: clamp(2.25rem, 6vw, 4.5rem);
+	font-weight: 800;
+	letter-spacing: 0.02em;
+	line-height: 1.05;
+	margin: 0 0 1.25rem;
+	text-transform: uppercase;
+}
+
+.kaffora-hero__lead {
+	font-size: 1.125rem;
+	margin: 0 0 1.75rem;
+}
+
+/* CSS-only "glass" shapes, echoing the DevCon 2026 key visual. Decorative, aria-hidden. */
+.kaffora-shape {
+	border-radius: 14px;
+	pointer-events: none;
+	position: absolute;
+}
+
+.kaffora-shape--a {
+	background: linear-gradient(135deg, rgba(210, 212, 255, 0.95), rgba(120, 118, 220, 0.55));
+	box-shadow: inset -18px -18px 40px rgba(40, 30, 120, 0.45);
+	height: 150px;
+	left: -30px;
+	top: -40px;
+	transform: rotate(38deg) skewX(-8deg);
+	width: 150px;
+}
+
+.kaffora-shape--b {
+	background: linear-gradient(135deg, rgba(200, 200, 255, 0.85), rgba(90, 80, 200, 0.4));
+	height: 110px;
+	left: 120px;
+	top: -50px;
+	transform: rotate(28deg);
+	width: 180px;
+}
+
+.kaffora-shape--c {
+	background: linear-gradient(160deg, #FFB8F5 0%, #E04CE8 45%, #9A10D8 100%);
+	box-shadow: inset 20px 0 50px rgba(255, 255, 255, 0.35);
+	height: 330px;
+	right: 60px;
+	top: -40px;
+	transform: rotate(32deg) skewY(-6deg);
+	width: 150px;
+}
+
+.kaffora-hero__band {
+	min-height: 420px;
+	position: relative;
+}
+
+.kaffora-hero__img {
+	display: block;
+	height: 420px;
+	object-fit: cover;
+	width: 100%;
+}
+
+.kaffora-hero__panel {
+	background: rgba(12, 12, 52, 0.92);
+	bottom: 12px;
+	left: max(1.25rem, calc(50% - 400px));
+	padding: 2.25rem 1.5rem;
+	position: absolute;
+	top: 12px;
+	width: min(260px, calc(100% - 2.5rem));
+}
+
+.kaffora-hero__panel-title {
+	font-size: 1.75rem;
+	font-weight: 700;
+	margin: 0 0 1.5rem;
+}
+
+.kaffora-hero__panel-name {
+	font-size: 1.25rem;
+	font-weight: 700;
+	line-height: 1.3;
+	margin: 0 0 0.75rem;
+}
+
+.kaffora-hero__panel-text {
+	color: var(--secondary, #C7C9EA);
+	font-size: 0.9375rem;
+	margin: 0 0 1.5rem;
+}
+
+.kaffora-hero__panel-btn {
+	font-size: 0.875rem;
+	padding: 0.45rem 1.25rem;
+}
+
+@media (max-width: 767px) {
+	.kaffora-shape--a,
+	.kaffora-shape--b {
+		display: none;
+	}
+
+	.kaffora-shape--c {
+		height: 200px;
+		right: -50px;
+		width: 90px;
+	}
+
+	.kaffora-hero__band {
+		min-height: 0;
+	}
+
+	.kaffora-hero__img {
+		height: 260px;
+	}
+
+	.kaffora-hero__panel {
+		bottom: auto;
+		left: auto;
+		position: relative;
+		top: auto;
+		width: auto;
+	}
+}
+:root {
+	--kaffora-navy: #07082B;
+	--kaffora-surface: #13153A;
+	--kaffora-line: #3A3D78;
+	--kaffora-purple: #7B1FFF;
+	--kaffora-magenta: #E4169B;
+	--kaffora-gradient: linear-gradient(100deg, #07082B 0%, #1B0B5E 40%, #6A12D6 72%, #C21BC0 100%);
+}
+.kaffora-btn {
+	background: var(--primary, #C2107F);
+	border: 0;
+	border-radius: 8px;
+	color: #FFFFFF;
+	display: inline-block;
+	font-family: var(--font-family-base, system-ui, sans-serif);
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 1.2;
+	padding: 0.7rem 1.5rem;
+	text-decoration: none;
+}
+
+.kaffora-btn:hover,
+.kaffora-btn:focus-visible {
+	color: #FFFFFF;
+	filter: brightness(1.1);
+	text-decoration: none;
+}
+
+.kaffora-btn--light {
+	background: #FFFFFF;
+	color: var(--primary, #C2107F);
+}
+
+.kaffora-btn--light:hover,
+.kaffora-btn--light:focus-visible {
+	color: var(--primary, #C2107F);
+}
+.kaffora-newsletter {
+	background: linear-gradient(100deg, #07082B 0%, #3A0C8C 45%, #B0149E 78%, #6A12D6 100%);
+	color: #FFFFFF;
+	font-family: var(--font-family-base, system-ui, sans-serif);
+	overflow: hidden;
+	padding: 4rem 1.25rem;
+	position: relative;
+}
+
+.kaffora-newsletter__shape {
+	background: linear-gradient(160deg, #FFC4F7 0%, #D85BE9 50%, #8A12D0 100%);
+	border-radius: 16px;
+	bottom: -60px;
+	height: 160px;
+	position: absolute;
+	right: -20px;
+	transform: rotate(-24deg);
+	width: 320px;
+}
+
+.kaffora-newsletter__inner {
+	align-items: center;
+	display: grid;
+	gap: 1.5rem;
+	margin: 0 auto;
+	max-width: 1040px;
+	position: relative;
+}
+
+@media (min-width: 992px) {
+	.kaffora-newsletter__inner {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+.kaffora-newsletter__title {
+	font-family: var(--font-family-monospace, ui-monospace, monospace);
+	font-size: 1.75rem;
+	font-weight: 800;
+	margin: 0 0 0.5rem;
+}
+
+.kaffora-newsletter__text {
+	margin: 0;
+}
+
+.kaffora-newsletter__label {
+	display: block;
+	font-weight: 700;
+	margin-bottom: 0.375rem;
+}
+
+.kaffora-newsletter__row {
+	display: flex;
+	gap: 0.5rem;
+}
+
+.kaffora-newsletter__input {
+	background: #FFFFFF;
+	border: 0;
+	border-radius: 8px;
+	color: #07082B;
+}
+
+.kaffora-newsletter__status {
+	margin: 0.5rem 0 0;
+	min-height: 1.5em;
+}
+:root {
+	--kaffora-navy: #07082B;
+	--kaffora-surface: #13153A;
+	--kaffora-line: #3A3D78;
+	--kaffora-purple: #7B1FFF;
+	--kaffora-magenta: #E4169B;
+	--kaffora-gradient: linear-gradient(100deg, #07082B 0%, #1B0B5E 40%, #6A12D6 72%, #C21BC0 100%);
+}
+.kaffora-btn {
+	background: var(--primary, #C2107F);
+	border: 0;
+	border-radius: 8px;
+	color: #FFFFFF;
+	display: inline-block;
+	font-family: var(--font-family-base, system-ui, sans-serif);
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 1.2;
+	padding: 0.7rem 1.5rem;
+	text-decoration: none;
+}
+
+.kaffora-btn:hover,
+.kaffora-btn:focus-visible {
+	color: #FFFFFF;
+	filter: brightness(1.1);
+	text-decoration: none;
+}
+
+.kaffora-btn--light {
+	background: #FFFFFF;
+	color: var(--primary, #C2107F);
+}
+
+.kaffora-btn--light:hover,
+.kaffora-btn--light:focus-visible {
+	color: var(--primary, #C2107F);
+}
+.kaffora-plan {
+	background: var(--kaffora-navy);
+	color: #FFFFFF;
+	font-family: var(--font-family-base, system-ui, sans-serif);
+	padding: 3.5rem 1.25rem;
+	text-align: center;
+}
+
+.kaffora-plan__inner {
+	margin: 0 auto;
+	max-width: 820px;
+}
+
+.kaffora-plan__title {
+	font-size: 2rem;
+	font-weight: 700;
+	margin: 0 0 1rem;
+}
+
+.kaffora-plan__price {
+	color: var(--brand-color-1, #FF5CCB);
+	font-family: var(--font-family-monospace, ui-monospace, monospace);
+	font-size: 3rem;
+	font-weight: 800;
+	line-height: 1;
+	margin: 0 0 0.75rem;
+}
+
+.kaffora-plan__rate {
+	font-weight: 700;
+	margin: 0 0 0.25rem;
+}
+
+.kaffora-plan__note {
+	color: var(--secondary, #C7C9EA);
+	font-size: 0.875rem;
+	font-style: italic;
+	margin: 0 0 1.75rem;
+}
+
+.kaffora-plan__subtitle {
+	font-size: 1.25rem;
+	font-weight: 700;
+	margin: 0 0 1.5rem;
+}
+
+.kaffora-plan__grid {
+	display: grid;
+	gap: 1.25rem;
+	grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+	list-style: none;
+	margin: 0 0 1.75rem;
+	padding: 0;
+}
+
+.kaffora-plan__item {
+	background: var(--kaffora-surface);
+	border: 1px solid var(--kaffora-line);
+	border-radius: 18px;
+	padding: 1.5rem 1rem;
+}
+
+.kaffora-plan__label {
+	color: var(--brand-color-1, #FF5CCB);
+	font-size: 0.875rem;
+	font-weight: 700;
+	margin: 0 0 0.75rem;
+}
+
+.kaffora-plan__text {
+	font-size: 0.9375rem;
+	margin: 0;
+}
+:root {
+	--kaffora-navy: #07082B;
+	--kaffora-surface: #13153A;
+	--kaffora-line: #3A3D78;
+	--kaffora-purple: #7B1FFF;
+	--kaffora-magenta: #E4169B;
+	--kaffora-gradient: linear-gradient(100deg, #07082B 0%, #1B0B5E 40%, #6A12D6 72%, #C21BC0 100%);
+}
+.kaffora-card {
+	background: var(--kaffora-surface);
+	border: 1px solid var(--kaffora-line);
+	border-radius: 18px;
+	color: #FFFFFF;
+	font-family: var(--font-family-base, system-ui, sans-serif);
+	height: 100%;
+	overflow: hidden;
+}
+
+.kaffora-card__img {
+	display: block;
+	height: auto;
+	width: 100%;
+}
+
+.kaffora-card__body {
+	padding: 1.25rem 1.25rem 1.5rem;
+	text-align: center;
+}
+
+.kaffora-card__meta {
+	color: var(--brand-color-1, #FF5CCB);
+	font-size: 0.875rem;
+	font-weight: 700;
+	margin: 0 0 0.5rem;
+}
+
+.kaffora-card__title {
+	font-size: 1.375rem;
+	font-weight: 700;
+	margin: 0 0 0.5rem;
+}
+
+.kaffora-card__text {
+	color: var(--secondary, #C7C9EA);
+	margin: 0 0 1rem;
+}
+
+.kaffora-card__link {
+	color: var(--brand-color-1, #FF5CCB);
+	font-weight: 700;
+}
+.kaffora-schema-placeholder {
+	background: repeating-linear-gradient(45deg, #13153A, #13153A 10px, #1B1E4A 10px, #1B1E4A 20px);
+	border: 1px dashed #6B6FB0;
+	border-radius: 0.5rem;
+	color: #FFFFFF;
+	font-family: monospace;
+	font-size: 0.8125rem;
+	padding: 0.75rem 1rem;
+}
+</style><style>/* Brand fonts pasted from the agency's handoff (render-blocking, 18 font files, display=block).
+ * The Style Book "Kaffora Brand v1" references these families. */
+@import url("http://127.0.0.1:8103/css2?family=Source+Sans+3:wght@200;300;400;500;600;700;800;900;1000&family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800;900&display=block");
+</style></head><body><a class="sr-only" href="#main-content">Skip to main content</a><div id="wrapper"><section id="content"><div id="main-content" role="main"><header class="kaffora-header">
+<div class="kaffora-header__inner">
+<a class="kaffora-header__brand" href="/">
+<img class="kaffora-header__logo" src="/kaffora-logo.png"/>
+</a>
+<nav class="kaffora-header__nav">
+<a href="/coffees">Coffees</a>
+<a href="/coffees">Subscriptions</a>
+<a href="/coffees">About</a>
+</nav>
+<div class="kaffora-header__actions">
+<button class="kaffora-icon-btn" type="button">
+<svg aria-hidden="true" focusable="false" height="22" viewbox="0 0 24 24" width="22"><circle cx="11" cy="11" fill="none" r="7" stroke="currentColor" stroke-width="2"></circle><path d="M20 20l-4-4" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg>
+</button>
+<button class="kaffora-icon-btn" type="button">
+<svg aria-hidden="true" focusable="false" height="22" viewbox="0 0 24 24" width="22"><path d="M5 8h14l-1 12H6z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path><path d="M9 8V6a3 3 0 016 0v2" fill="none" stroke="currentColor" stroke-width="2"></path></svg>
+</button>
+<a class="kaffora-btn kaffora-header__cta" href="/coffees">Shop now</a>
+</div>
+</div>
+</header>
+<section class="kaffora-hero">
+<div class="kaffora-hero__intro">
+<div aria-hidden="true" class="kaffora-shape kaffora-shape--a"></div>
+<div aria-hidden="true" class="kaffora-shape kaffora-shape--b"></div>
+<div aria-hidden="true" class="kaffora-shape kaffora-shape--c"></div>
+<div class="kaffora-hero__copy">
+<h1 class="kaffora-hero__title">Coffee worth waking up for</h1>
+<p class="kaffora-hero__lead">Single-origin beans | roasted every Monday | delivered in 48 hours</p>
+<a class="kaffora-btn" href="/coffees">Shop coffee</a>
+</div>
+</div>
+<div class="kaffora-hero__band">
+<img class="kaffora-hero__img" src="/documents/hero-coffee-4k.jpg"/>
+<div class="kaffora-hero__panel">
+<h2 class="kaffora-hero__panel-title">The roastery</h2>
+<p class="kaffora-hero__panel-name">Kaffora Roastery &amp; Bar</p>
+<p class="kaffora-hero__panel-text">Rua dos Pinheiros 1000, São Paulo, Brazil. Open daily, 8:00 to 18:00.</p>
+<a class="kaffora-btn kaffora-btn--light kaffora-hero__panel-btn" href="/coffees">Book a cupping</a>
+</div>
+</div>
+</section>
+<div class="kaffora-section"><h4 class="component-heading">This week's roasts</h4><div class="kaffora-grid"><article class="kaffora-card">
+<img class="kaffora-card__img" src="/documents/coffee-cerrado.jpg"/>
+<div class="kaffora-card__body">
+<p class="kaffora-card__meta">250 g · from €14</p>
+<h3 class="kaffora-card__title">Brazil Cerrado Mineiro</h3>
+<p class="kaffora-card__text">Chocolate, hazelnut and a round, sweet body. Our everyday espresso.</p>
+<a class="kaffora-card__link" href="/coffees">Read more</a>
+</div>
+</article>
+<article class="kaffora-card">
+<img class="kaffora-card__img" src="/documents/coffee-yirgacheffe.jpg"/>
+<div class="kaffora-card__body">
+<p class="kaffora-card__meta">250 g · from €18</p>
+<h3 class="kaffora-card__title">Ethiopia Yirgacheffe</h3>
+<p class="kaffora-card__text">Jasmine, bergamot and lemon. Bright and tea-like, made for filter.</p>
+<a class="kaffora-card__link" href="/coffees">Read more</a>
+</div>
+</article>
+<article class="kaffora-card">
+<img class="kaffora-card__img" src="/documents/coffee-huila.jpg"/>
+<div class="kaffora-card__body">
+<p class="kaffora-card__meta">250 g · from €16</p>
+<h3 class="kaffora-card__title">Colombia Huila</h3>
+<p class="kaffora-card__text">Red apple, panela and caramel with a juicy finish.</p>
+<a class="kaffora-card__link" href="/coffees">Read more</a>
+</div>
+</article>
+</div></div><section class="kaffora-plan">
+<div class="kaffora-plan__inner">
+<h2 class="kaffora-plan__title">Coffee subscription</h2>
+<p class="kaffora-plan__price">€12</p>
+<p class="kaffora-plan__rate">Per 250 g bag, every two weeks</p>
+<p class="kaffora-plan__note">*Free shipping on subscriptions</p>
+<h3 class="kaffora-plan__subtitle">Your subscription includes</h3>
+<ul class="kaffora-plan__grid">
+<li class="kaffora-plan__item">
+<p class="kaffora-plan__label">Monday</p>
+<p class="kaffora-plan__text">Roasted to order, in small batches</p>
+</li>
+<li class="kaffora-plan__item">
+<p class="kaffora-plan__label">48 hours</p>
+<p class="kaffora-plan__text">From the roaster to your door</p>
+</li>
+<li class="kaffora-plan__item">
+<p class="kaffora-plan__label">Any time</p>
+<p class="kaffora-plan__text">Pause, skip or swap origins</p>
+</li>
+<li class="kaffora-plan__item">
+<p class="kaffora-plan__label">Bonus</p>
+<p class="kaffora-plan__text">Brew guide and tasting card</p>
+</li>
+</ul>
+<a class="kaffora-btn" href="/coffees">Start subscription</a>
+</div>
+</section>
+<section class="kaffora-newsletter" id="newsletter">
+<div aria-hidden="true" class="kaffora-newsletter__shape"></div>
+<div class="kaffora-newsletter__inner">
+<div>
+<h2 class="kaffora-newsletter__title">Fresh roasts, once a month</h2>
+<p class="kaffora-newsletter__text">No spam. Unsubscribe any time.</p>
+</div>
+<form action="#" class="kaffora-newsletter__form">
+<div class="kaffora-newsletter__row">
+<input autocomplete="email" class="form-control kaffora-newsletter__input" id="nl-email" name="email" placeholder="name@example.com" required="" type="email"/>
+<button class="kaffora-btn" type="submit">Subscribe</button>
+</div>
+<p aria-live="polite" class="kaffora-newsletter__status"></p>
+</form>
+</div>
+</section>
+<section class="kaffora-about">
+<div class="kaffora-about__inner">
+<div>
+<h2 class="kaffora-about__label">About Kaffora</h2>
+<div class="kaffora-about__text"><p>Kaffora is a small specialty roaster in São Paulo. We buy green coffee directly from farms we visit every harvest and roast it in 15 kg batches every Monday.</p><p>Every bag carries the farm, the variety, the process and the roast date, so you always know what is in your cup.</p></div>
+</div>
+<div aria-hidden="true" class="kaffora-about__art">
+<span class="kaffora-about__disc"></span>
+<span class="kaffora-about__bar"></span>
+<span class="kaffora-about__dot"></span>
+</div>
+<div>
+<h2 class="kaffora-about__label">Our sourcing</h2>
+<div class="kaffora-about__text"><p>We pay at least 40% above the commodity price and publish every contract. Our partner farms are in Minas Gerais, Huila and the Gedeo zone of Ethiopia.</p><p>Packaging is compostable, and shipping in Brazil is carbon-offset.</p></div>
+</div>
+</div>
+</section>
+<footer class="kaffora-footer">
+<div class="kaffora-footer__inner">
+<h2 class="kaffora-footer__title">Questions?</h2>
+<a class="kaffora-btn" href="/coffees">Contact us</a>
+<p class="kaffora-footer__legal">© 2026 Kaffora Coffee (fictional brand). To read our privacy policy, <a href="/coffees">click here</a>.</p>
+<div class="kaffora-footer__bottom">
+<span class="kaffora-footer__brand">Kaffora</span>
+<div class="kaffora-footer__social">
+<a href="https://www.instagram.com/"><svg aria-hidden="true" focusable="false" height="20" viewbox="0 0 24 24" width="20"><rect fill="none" height="18" rx="5" stroke="currentColor" stroke-width="2" width="18" x="3" y="3"></rect><circle cx="12" cy="12" fill="none" r="4" stroke="currentColor" stroke-width="2"></circle></svg></a>
+<a href="https://www.youtube.com/"><svg aria-hidden="true" focusable="false" height="20" viewbox="0 0 24 24" width="20"><rect fill="none" height="14" rx="4" stroke="currentColor" stroke-width="2" width="20" x="2" y="5"></rect><path d="M10 9l5 3-5 3z" fill="currentColor"></path></svg></a>
+<a href="https://www.linkedin.com/"><svg aria-hidden="true" focusable="false" height="20" viewbox="0 0 24 24" width="20"><rect fill="none" height="18" rx="3" stroke="currentColor" stroke-width="2" width="18" x="3" y="3"></rect><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 014 0v4" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg></a>
+</div>
+</div>
+</div>
+</footer>
+</div></section></div><script>/*
+ * "Tag soup": snippets pasted into the site JavaScript field by different teams over the years.
+ * Every line below is a real-world anti-pattern that Lighthouse 13 flags.
+ */
+
+// 1) Legacy "analytics" fingerprinting the visitor with synchronous work on the main thread.
+window.addEventListener('load', function () {
+	setTimeout(function () {
+		var start = Date.now();
+		var fingerprint = 0;
+
+		while (Date.now() - start < 600) {
+			fingerprint += Math.sqrt(Math.random() * 1e6);
+		}
+
+		window.__kafforaFingerprint = fingerprint;
+	}, 50);
+});
+
+// 2) Vendor libraries nobody uses anymore (unused + legacy JavaScript, third parties).
+['http://127.0.0.1:8103/libs/jquery.js',
+	'http://127.0.0.1:8103/libs/lodash.js?m',
+	'http://127.0.0.1:8103/libs/lodash.js'].forEach(function (src) {
+	var script = document.createElement('script');
+
+	script.src = src;
+	document.head.appendChild(script);
+});
+
+// 3) Promo bar injected at the top of the page after load (layout shift).
+setTimeout(function () {
+	var bar = document.createElement('div');
+
+	bar.setAttribute('style', 'background:#ffe08a;color:#3b2f00;font-weight:600;padding:18px 16px;text-align:center;');
+	bar.textContent = 'Flash sale: 40% off your first subscription. Ends Sunday!';
+
+	var target = document.getElementById('main-content') || document.body;
+
+	target.insertBefore(bar, target.firstChild);
+}, 1500);
+
+// 4) Permission prompts on page load.
+if (navigator.geolocation) {
+	navigator.geolocation.getCurrentPosition(function () {}, function () {});
+}
+
+if ('Notification' in window && Notification.permission === 'default') {
+	Notification.requestPermission();
+}
+
+// 5) "Security" team asked to block pasting into e-mail fields.
+document.addEventListener('DOMContentLoaded', function () {
+	document.querySelectorAll('input[type="email"]').forEach(function (input) {
+		input.addEventListener('paste', function (event) {
+			event.preventDefault();
+		});
+	});
+});
+
+// 6) Tracker that was removed from the page years ago (console error).
+setTimeout(function () {
+	window.legacyTracker.track('pageview');
+}, 0);
+</script></body></html>

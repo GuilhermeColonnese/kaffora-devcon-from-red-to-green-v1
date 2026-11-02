@@ -1,0 +1,45 @@
+# Kaffora Coffee · DevCon 2026 "From Red to Green" workshop
+#
+#   Red (baseline):   docker compose up -d
+#   Green (tuned):    docker compose -f docker-compose.yml -f docker-compose.green.yml up -d liferay cdn
+#                     (recreates Liferay and starts the local CDN on :8081, data is kept; same command on macOS, Windows and Linux)
+#   Back to red:      docker compose up -d --remove-orphans liferay
+#
+# Before the first start, copy your DXP Free Tier activation key (.xml, free from
+# marketplace.liferay.com/p/liferay-dxp-free-tier, domain: localhost) and
+# ../liferay/deploy/kaffora-site-initializer.jar into ./deploy/
+name: kaffora-devcon
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: lportal
+      POSTGRES_PASSWORD: liferay
+      POSTGRES_USER: liferay
+    healthcheck:
+      interval: 5s
+      retries: 20
+      test: ["CMD-SHELL", "pg_isready -U liferay -d lportal"]
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  liferay:
+    image: liferay/dxp:${LIFERAY_TAG:-2026.q3.0}   # DXP Free Tier: the initial release of each quarter
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      LIFERAY_JVM_OPTS: "-Xms2g -Xmx4g"
+    ports:
+      - "8080:8080"
+    volumes:
+      # portal-ext.properties: red = developer settings leaked to prod (docker-compose.green.yml swaps it)
+      - ./profiles/red:/mnt/liferay/files
+      # Free Tier activation key + site initializer + client extensions
+      - ./deploy:/mnt/liferay/deploy
+      - liferay-data:/opt/liferay/data
+
+volumes:
+  liferay-data:
+  pgdata:

@@ -1,0 +1,37 @@
+/*
+ * Kaffora brand fonts, the governed way (CSS client extension, type globalCSS).
+ *
+ * Replaces the agency's @import of 18 Google Fonts files with display=block:
+ *   - self-hosted: no third-party connection, no extra DNS/TLS on the critical path
+ *   - 3 files, latin subset, woff2 (~53 KB total) instead of 18
+ *   - font-display: optional: the browser uses the font only if it arrives within ~100 ms,
+ *     otherwise it keeps the fallback for this visit. No invisible text, no layout shift.
+ *     (Use swap if the brand must always show, at the cost of a possible shift.)
+ *
+ * Family names match the Style Book tokens, so "Kaffora Accessible" can list them first:
+ *   'Source Sans 3', system-ui, …   and   'JetBrains Mono', ui-monospace, …
+ * Fonts: SIL Open Font License 1.1 (see fonts/OFL-*.txt).
+ */
+@font-face {
+	font-display: optional;
+	font-family: 'Source Sans 3';
+	font-style: normal;
+	font-weight: 400;
+	src: url('fonts/source-sans-3-latin-400-normal.woff2') format('woff2');
+}
+
+@font-face {
+	font-display: optional;
+	font-family: 'Source Sans 3';
+	font-style: normal;
+	font-weight: 700;
+	src: url('fonts/source-sans-3-latin-700-normal.woff2') format('woff2');
+}
+
+@font-face {
+	font-display: optional;
+	font-family: 'JetBrains Mono';
+	font-style: normal;
+	font-weight: 700;
+	src: url('fonts/jetbrains-mono-latin-700-normal.woff2') format('woff2');
+}

@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "liferay": {
+      "command": "npx",
+      "args": [
+        "mcp-remote",
+        "http://localhost:8080/o/mcp",
+        "--header",
+        "Authorization:${AUTH_HEADER}"
+      ],
+      "env": {
+        "AUTH_HEADER": "Basic <base64 of user:password>"
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+name: check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Syntax-check the Node tools
+        run: for f in tools/*.mjs headless/*.mjs headless/public/*.mjs replica/*.mjs; do node --check "$f"; done
+      - name: Validate every JSON file in the site initializer and fix pack
+        run: find liferay/site-initializer fixes headless/data -name '*.json' -print0 | xargs -0 -n1 python3 -m json.tool > /dev/null
+      - name: Check the client extension archive layout
+        run: |
+          unzip -l client-extensions/dist/kaffora-cx.zip | grep -q 'kaffora-cx.client-extension-config.json'
+          unzip -p client-extensions/dist/kaffora-cx.zip WEB-INF/liferay-plugin-package.properties | grep -q 'module-group-id='

@@ -1,0 +1,12 @@
+{
+	"friendlyURL": "/coffees",
+	"hidden": false,
+	"name": "Coffees",
+	"name_i18n": {
+		"en_US": "Coffees"
+	},
+	"private": false,
+	"priority": 1,
+	"system": false,
+	"type": "Content"
+}

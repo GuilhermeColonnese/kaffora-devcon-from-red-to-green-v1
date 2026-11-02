@@ -1,0 +1,9 @@
+[
+	{
+		"pid": "com.liferay.site.internal.configuration.LLMSGroupConfiguration",
+		"properties": {
+			"content": "Kaffora Coffee\nCoffee.\n",
+			"enabled": "true"
+		}
+	}
+]

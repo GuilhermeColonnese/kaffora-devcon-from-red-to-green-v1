@@ -1,0 +1,1 @@
+default-src 'self'; script-src 'self' '[$NONCE$]' 'strict-dynamic'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; object-src 'none'; base-uri 'self'; frame-ancestors 'self'

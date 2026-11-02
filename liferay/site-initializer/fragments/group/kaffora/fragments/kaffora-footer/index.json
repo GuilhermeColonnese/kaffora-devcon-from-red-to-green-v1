@@ -1,0 +1,31 @@
+{
+	"fieldSets": [
+		{
+			"label": "Accessibility",
+			"fields": [
+				{
+					"dataType": "string",
+					"defaultValue": "",
+					"label": "Instagram link accessible name",
+					"name": "instagramLabel",
+					"type": "text",
+					"description": "e.g. 'Kaffora Coffee on Instagram'."
+				},
+				{
+					"dataType": "string",
+					"defaultValue": "",
+					"label": "YouTube link accessible name",
+					"name": "youtubeLabel",
+					"type": "text"
+				},
+				{
+					"dataType": "string",
+					"defaultValue": "",
+					"label": "LinkedIn link accessible name",
+					"name": "linkedinLabel",
+					"type": "text"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,15 @@
+{
+	"friendlyURL": "/home",
+	"hidden": false,
+	"name": "Home",
+	"name_i18n": {
+		"en_US": "Home"
+	},
+	"private": false,
+	"priority": 0,
+	"robots_i18n": {
+		"en_US": "noindex, nofollow"
+	},
+	"system": false,
+	"type": "Content"
+}

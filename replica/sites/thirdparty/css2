@@ -1,0 +1,8 @@
+@font-face{font-family:'Source Sans 3';font-weight:100;font-display:block;src:url(http://127.0.0.1:8103/fonts/f0.ttf)}
+@font-face{font-family:'JetBrains Mono';font-weight:100;font-display:block;src:url(http://127.0.0.1:8103/fonts/f0.ttf?m)}
+@font-face{font-family:'Source Sans 3';font-weight:200;font-display:block;src:url(http://127.0.0.1:8103/fonts/f1.ttf)}
+@font-face{font-family:'JetBrains Mono';font-weight:200;font-display:block;src:url(http://127.0.0.1:8103/fonts/f1.ttf?m)}
+@font-face{font-family:'Source Sans 3';font-weight:300;font-display:block;src:url(http://127.0.0.1:8103/fonts/f2.ttf)}
+@font-face{font-family:'JetBrains Mono';font-weight:300;font-display:block;src:url(http://127.0.0.1:8103/fonts/f2.ttf?m)}
+@font-face{font-family:'Source Sans 3';font-weight:400;font-display:block;src:url(http://127.0.0.1:8103/fonts/f3.ttf)}
+@font-face{font-family:'JetBrains Mono';font-weight:400;font-display:block;src:url(http://127.0.0.1:8103/fonts/f3.ttf?m)}

@@ -1,0 +1,17 @@
+[#if layoutMode == "edit"]
+	<div class="kaffora-schema-placeholder">
+		Schema.org JSON-LD · ${htmlUtil.escape(configuration.schemaType)} · "${htmlUtil.escape(configuration.orgName)}" (invisible to visitors)
+	</div>
+[/#if]
+<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@type": "${configuration.schemaType?json_string}",
+	"name": "${configuration.orgName?json_string}",
+	"description": "${configuration.orgDescription?json_string}",
+	"url": "${configuration.orgUrl?json_string}",
+	"logo": "${configuration.logoUrl?json_string}",
+	"telephone": "${configuration.telephone?json_string}",
+	"sameAs": ["https://www.instagram.com/", "https://www.youtube.com/"]
+}
+</script>

@@ -1,0 +1,15 @@
+# Kaffora Coffee
+
+> Kaffora Coffee is a (fictional) specialty roaster selling single-origin beans and subscriptions, roasted every Monday and delivered within 48 hours.
+
+## Coffees
+
+- [All coffees](http://kaffora.localhost:8080/coffees): every coffee with tasting notes and price
+- [Brazil Cerrado Mineiro](http://kaffora.localhost:8080/coffees): 250 g, from €14
+- [Ethiopia Yirgacheffe](http://kaffora.localhost:8080/coffees): 250 g, from €18
+- [Colombia Huila](http://kaffora.localhost:8080/coffees): 250 g, from €16
+
+## Help
+
+- [Newsletter](http://kaffora.localhost:8080/#newsletter): new roasts by e-mail
+- [Sitemap](http://kaffora.localhost:8080/sitemap.xml): full list of public pages

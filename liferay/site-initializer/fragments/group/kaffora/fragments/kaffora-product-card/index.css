@@ -1,0 +1,51 @@
+:root {
+	--kaffora-navy: #07082B;
+	--kaffora-surface: #13153A;
+	--kaffora-line: #3A3D78;
+	--kaffora-purple: #7B1FFF;
+	--kaffora-magenta: #E4169B;
+	--kaffora-gradient: linear-gradient(100deg, #07082B 0%, #1B0B5E 40%, #6A12D6 72%, #C21BC0 100%);
+}
+.kaffora-card {
+	background: var(--kaffora-surface);
+	border: 1px solid var(--kaffora-line);
+	border-radius: 18px;
+	color: #FFFFFF;
+	font-family: var(--font-family-base, system-ui, sans-serif);
+	height: 100%;
+	overflow: hidden;
+}
+
+.kaffora-card__img {
+	display: block;
+	height: auto;
+	width: 100%;
+}
+
+.kaffora-card__body {
+	padding: 1.25rem 1.25rem 1.5rem;
+	text-align: center;
+}
+
+.kaffora-card__meta {
+	color: var(--brand-color-1, #FF5CCB);
+	font-size: 0.875rem;
+	font-weight: 700;
+	margin: 0 0 0.5rem;
+}
+
+.kaffora-card__title {
+	font-size: 1.375rem;
+	font-weight: 700;
+	margin: 0 0 0.5rem;
+}
+
+.kaffora-card__text {
+	color: var(--secondary, #C7C9EA);
+	margin: 0 0 1rem;
+}
+
+.kaffora-card__link {
+	color: var(--brand-color-1, #FF5CCB);
+	font-weight: 700;
+}

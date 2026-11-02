@@ -1,0 +1,15 @@
+# Kaffora Coffee
+
+> Kaffora Coffee is a (fictional) specialty roaster in São Paulo selling single-origin beans and subscriptions, roasted every Monday and delivered within 48 hours.
+
+## Coffees
+
+- [All coffees](/coffees): every coffee with tasting notes and price
+- [Brazil Cerrado Mineiro](/coffees): 250 g, from €14
+- [Ethiopia Yirgacheffe](/coffees): 250 g, from €18
+- [Colombia Huila](/coffees): 250 g, from €16
+
+## Help
+
+- [Coffee subscription](/#newsletter): €12 per bag, every two weeks
+- [Sitemap](/sitemap.xml): full list of public pages

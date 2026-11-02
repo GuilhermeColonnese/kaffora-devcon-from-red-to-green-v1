@@ -1,0 +1,20 @@
+# GREEN override: production defaults + GZip, plus a local "CDN" edge (Nginx) on :8081.
+#   docker compose -f docker-compose.yml -f docker-compose.green.yml up -d liferay cdn
+# Compose merges volumes by container path, so this replaces the red profile mount.
+services:
+  liferay:
+    volumes:
+      - ./profiles/green:/mnt/liferay/files
+
+  cdn:
+    image: nginx:1.27-alpine
+    depends_on:
+      - liferay
+    ports:
+      - "8081:80"
+    volumes:
+      - ./cdn/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - cdn-cache:/var/cache/nginx/kaffora
+
+volumes:
+  cdn-cache:

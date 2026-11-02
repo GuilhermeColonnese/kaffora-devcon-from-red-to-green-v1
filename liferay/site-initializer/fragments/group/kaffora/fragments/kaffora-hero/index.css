@@ -1,0 +1,183 @@
+:root {
+	--kaffora-navy: #07082B;
+	--kaffora-surface: #13153A;
+	--kaffora-line: #3A3D78;
+	--kaffora-purple: #7B1FFF;
+	--kaffora-magenta: #E4169B;
+	--kaffora-gradient: linear-gradient(100deg, #07082B 0%, #1B0B5E 40%, #6A12D6 72%, #C21BC0 100%);
+}
+.kaffora-btn {
+	background: var(--primary, #C2107F);
+	border: 0;
+	border-radius: 8px;
+	color: #FFFFFF;
+	display: inline-block;
+	font-family: var(--font-family-base, system-ui, sans-serif);
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 1.2;
+	padding: 0.7rem 1.5rem;
+	text-decoration: none;
+}
+
+.kaffora-btn:hover,
+.kaffora-btn:focus-visible {
+	color: #FFFFFF;
+	filter: brightness(1.1);
+	text-decoration: none;
+}
+
+.kaffora-btn--light {
+	background: #FFFFFF;
+	color: var(--primary, #C2107F);
+}
+
+.kaffora-btn--light:hover,
+.kaffora-btn--light:focus-visible {
+	color: var(--primary, #C2107F);
+}
+.kaffora-hero {
+	background: var(--kaffora-navy);
+	color: #FFFFFF;
+	font-family: var(--font-family-base, system-ui, sans-serif);
+}
+
+.kaffora-hero__intro {
+	background: var(--kaffora-gradient);
+	overflow: hidden;
+	padding: 5.5rem 1.25rem 6rem;
+	position: relative;
+	text-align: center;
+}
+
+.kaffora-hero__copy {
+	margin: 0 auto;
+	max-width: 880px;
+	position: relative;
+}
+
+.kaffora-hero__title {
+	font-family: var(--font-family-monospace, ui-monospace, monospace);
+	font-size: clamp(2.25rem, 6vw, 4.5rem);
+	font-weight: 800;
+	letter-spacing: 0.02em;
+	line-height: 1.05;
+	margin: 0 0 1.25rem;
+	text-transform: uppercase;
+}
+
+.kaffora-hero__lead {
+	font-size: 1.125rem;
+	margin: 0 0 1.75rem;
+}
+
+/* CSS-only "glass" shapes, echoing the DevCon 2026 key visual. Decorative, aria-hidden. */
+.kaffora-shape {
+	border-radius: 14px;
+	pointer-events: none;
+	position: absolute;
+}
+
+.kaffora-shape--a {
+	background: linear-gradient(135deg, rgba(210, 212, 255, 0.95), rgba(120, 118, 220, 0.55));
+	box-shadow: inset -18px -18px 40px rgba(40, 30, 120, 0.45);
+	height: 150px;
+	left: -30px;
+	top: -40px;
+	transform: rotate(38deg) skewX(-8deg);
+	width: 150px;
+}
+
+.kaffora-shape--b {
+	background: linear-gradient(135deg, rgba(200, 200, 255, 0.85), rgba(90, 80, 200, 0.4));
+	height: 110px;
+	left: 120px;
+	top: -50px;
+	transform: rotate(28deg);
+	width: 180px;
+}
+
+.kaffora-shape--c {
+	background: linear-gradient(160deg, #FFB8F5 0%, #E04CE8 45%, #9A10D8 100%);
+	box-shadow: inset 20px 0 50px rgba(255, 255, 255, 0.35);
+	height: 330px;
+	right: 60px;
+	top: -40px;
+	transform: rotate(32deg) skewY(-6deg);
+	width: 150px;
+}
+
+.kaffora-hero__band {
+	min-height: 420px;
+	position: relative;
+}
+
+.kaffora-hero__img {
+	display: block;
+	height: 420px;
+	object-fit: cover;
+	width: 100%;
+}
+
+.kaffora-hero__panel {
+	background: rgba(12, 12, 52, 0.92);
+	bottom: 12px;
+	left: max(1.25rem, calc(50% - 400px));
+	padding: 2.25rem 1.5rem;
+	position: absolute;
+	top: 12px;
+	width: min(260px, calc(100% - 2.5rem));
+}
+
+.kaffora-hero__panel-title {
+	font-size: 1.75rem;
+	font-weight: 700;
+	margin: 0 0 1.5rem;
+}
+
+.kaffora-hero__panel-name {
+	font-size: 1.25rem;
+	font-weight: 700;
+	line-height: 1.3;
+	margin: 0 0 0.75rem;
+}
+
+.kaffora-hero__panel-text {
+	color: var(--secondary, #C7C9EA);
+	font-size: 0.9375rem;
+	margin: 0 0 1.5rem;
+}
+
+.kaffora-hero__panel-btn {
+	font-size: 0.875rem;
+	padding: 0.45rem 1.25rem;
+}
+
+@media (max-width: 767px) {
+	.kaffora-shape--a,
+	.kaffora-shape--b {
+		display: none;
+	}
+
+	.kaffora-shape--c {
+		height: 200px;
+		right: -50px;
+		width: 90px;
+	}
+
+	.kaffora-hero__band {
+		min-height: 0;
+	}
+
+	.kaffora-hero__img {
+		height: 260px;
+	}
+
+	.kaffora-hero__panel {
+		bottom: auto;
+		left: auto;
+		position: relative;
+		top: auto;
+		width: auto;
+	}
+}

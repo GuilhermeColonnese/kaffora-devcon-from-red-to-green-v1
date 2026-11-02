@@ -1,0 +1,4 @@
+User-agent *
+Disalow: /web/
+Crawl-delay 10
+Sitemap: /sitemap.xml

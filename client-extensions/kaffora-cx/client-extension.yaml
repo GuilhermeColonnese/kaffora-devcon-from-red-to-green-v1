@@ -1,0 +1,16 @@
+# Kaffora client extensions (Liferay Workspace format, for teams that build with `blade gw deploy`).
+# The kit ships the built archive, dist/kaffora-cx.zip, made by ../build.py without Gradle.
+assemble:
+    - from: static
+      into: static
+kaffora-brand-fonts:
+    name: Kaffora Brand Fonts (self-hosted, optional display)
+    type: globalCSS
+    url: kaffora-brand-fonts.css
+kaffora-tags:
+    name: Kaffora Tags (governed)
+    scriptElementAttributes:
+        async: true
+    scriptLocation: bottom
+    type: globalJS
+    url: kaffora-tags.js

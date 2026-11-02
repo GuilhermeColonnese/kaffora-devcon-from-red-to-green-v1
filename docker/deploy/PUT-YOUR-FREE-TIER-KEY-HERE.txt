@@ -1,0 +1,3 @@
+Put your Liferay DXP Free Tier activation key (.xml) here.
+Get it free at https://marketplace.liferay.com/p/liferay-dxp-free-tier (domain: localhost).
+Keys are personal: never commit them (*.xml is git-ignored in this folder).

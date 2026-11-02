@@ -1,0 +1,82 @@
+:root {
+	--kaffora-navy: #07082B;
+	--kaffora-surface: #13153A;
+	--kaffora-line: #3A3D78;
+	--kaffora-purple: #7B1FFF;
+	--kaffora-magenta: #E4169B;
+	--kaffora-gradient: linear-gradient(100deg, #07082B 0%, #1B0B5E 40%, #6A12D6 72%, #C21BC0 100%);
+}
+.kaffora-about {
+	background: var(--kaffora-navy);
+	color: #FFFFFF;
+	font-family: var(--font-family-base, system-ui, sans-serif);
+	padding: 3.5rem 1.25rem;
+}
+
+.kaffora-about__inner {
+	align-items: start;
+	display: grid;
+	gap: 2rem;
+	margin: 0 auto;
+	max-width: 1040px;
+}
+
+@media (min-width: 992px) {
+	.kaffora-about__inner {
+		grid-template-columns: 1fr 260px 1fr;
+	}
+}
+
+.kaffora-about__label {
+	color: var(--brand-color-1, #FF5CCB);
+	font-size: 1rem;
+	font-weight: 700;
+	margin: 0 0 1rem;
+}
+
+.kaffora-about__text p {
+	font-size: 0.9375rem;
+	margin: 0 0 1rem;
+}
+
+.kaffora-about__art {
+	aspect-ratio: 1;
+	justify-self: center;
+	max-width: 260px;
+	width: 100%;
+	background: radial-gradient(circle at 70% 25%, #C21BC0 0%, #5B12C9 45%, #13153A 80%);
+	border-radius: 4px;
+	overflow: hidden;
+	position: relative;
+}
+
+.kaffora-about__disc {
+	background: linear-gradient(135deg, #E9E6FF, #8D86E8);
+	border-radius: 50%;
+	bottom: -30px;
+	height: 150px;
+	left: -20px;
+	position: absolute;
+	width: 150px;
+}
+
+.kaffora-about__bar {
+	background: linear-gradient(160deg, #FFC4F7, #C43BDF);
+	border-radius: 10px;
+	height: 150px;
+	position: absolute;
+	right: 30px;
+	top: 20px;
+	transform: rotate(35deg);
+	width: 44px;
+}
+
+.kaffora-about__dot {
+	background: #FFFFFF;
+	border-radius: 50%;
+	height: 40px;
+	left: 90px;
+	position: absolute;
+	top: 80px;
+	width: 40px;
+}

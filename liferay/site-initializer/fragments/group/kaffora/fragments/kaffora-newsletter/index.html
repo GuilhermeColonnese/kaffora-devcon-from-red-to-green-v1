@@ -1,0 +1,25 @@
+<section class="kaffora-newsletter" id="newsletter">
+	<div aria-hidden="true" class="kaffora-newsletter__shape"></div>
+
+	<div class="kaffora-newsletter__inner">
+		<div>
+			<h2 class="kaffora-newsletter__title" data-lfr-editable-id="title" data-lfr-editable-type="text">Fresh roasts, once a month</h2>
+
+			<p class="kaffora-newsletter__text" data-lfr-editable-id="text" data-lfr-editable-type="text">No spam. Unsubscribe any time.</p>
+		</div>
+
+		<form action="#" class="kaffora-newsletter__form"[#if configuration.exposeWebMCP] toolname="subscribeToNewsletter" tooldescription="${htmlUtil.escape(configuration.webMCPDescription)}"[/#if]>
+			[#if configuration.fieldLabel?has_content]
+				<label class="kaffora-newsletter__label" for="${fragmentEntryLinkNamespace}-email">${htmlUtil.escape(configuration.fieldLabel)}</label>
+			[/#if]
+
+			<div class="kaffora-newsletter__row">
+				<input autocomplete="email" class="form-control kaffora-newsletter__input" id="${fragmentEntryLinkNamespace}-email" name="email" placeholder="name@example.com" required type="email"[#if configuration.exposeWebMCP] toolparamdescription="E-mail address that will receive the newsletter"[/#if] />
+
+				<button class="kaffora-btn" type="submit">Subscribe</button>
+			</div>
+
+			<p aria-live="polite" class="kaffora-newsletter__status"></p>
+		</form>
+	</div>
+</section>

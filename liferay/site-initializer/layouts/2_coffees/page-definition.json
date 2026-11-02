@@ -1,0 +1,477 @@
+{
+	"pageElement": {
+		"type": "Root",
+		"pageElements": [
+			{
+				"type": "Fragment",
+				"definition": {
+					"fragment": {
+						"key": "kaffora-header"
+					},
+					"fragmentConfig": {},
+					"fragmentFields": [
+						{
+							"id": "nav-1",
+							"value": {
+								"fragmentLink": {
+									"value_i18n": {
+										"en_US": {
+											"href": {
+												"value": "/coffees"
+											},
+											"target": "Self"
+										}
+									}
+								},
+								"text": {
+									"value_i18n": {
+										"en_US": "Coffees"
+									}
+								}
+							}
+						},
+						{
+							"id": "nav-2",
+							"value": {
+								"fragmentLink": {
+									"value_i18n": {
+										"en_US": {
+											"href": {
+												"value": "/coffees"
+											},
+											"target": "Self"
+										}
+									}
+								},
+								"text": {
+									"value_i18n": {
+										"en_US": "Subscriptions"
+									}
+								}
+							}
+						},
+						{
+							"id": "nav-3",
+							"value": {
+								"fragmentLink": {
+									"value_i18n": {
+										"en_US": {
+											"href": {
+												"value": "/coffees"
+											},
+											"target": "Self"
+										}
+									}
+								},
+								"text": {
+									"value_i18n": {
+										"en_US": "About"
+									}
+								}
+							}
+						},
+						{
+							"id": "cta",
+							"value": {
+								"fragmentLink": {
+									"value_i18n": {
+										"en_US": {
+											"href": {
+												"value": "/coffees"
+											},
+											"target": "Self"
+										}
+									}
+								},
+								"text": {
+									"value_i18n": {
+										"en_US": "Shop now"
+									}
+								}
+							}
+						}
+					]
+				}
+			},
+			{
+				"type": "Section",
+				"definition": {
+					"layout": {
+						"widthType": "Fixed"
+					},
+					"fragmentStyle": {
+						"paddingBottom": "6",
+						"paddingTop": "6"
+					}
+				},
+				"pageElements": [
+					{
+						"type": "Fragment",
+						"definition": {
+							"fragment": {
+								"key": "BASIC_COMPONENT-heading"
+							},
+							"fragmentConfig": {
+								"headingLevel": "h1"
+							},
+							"fragmentFields": [
+								{
+									"id": "element-text",
+									"value": {
+										"fragmentLink": {
+											"value_i18n": {}
+										},
+										"text": {
+											"value_i18n": {
+												"en_US": "All coffees"
+											}
+										}
+									}
+								}
+							],
+							"fragmentStyle": {
+								"marginBottom": "4"
+							}
+						}
+					},
+					{
+						"type": "Row",
+						"definition": {
+							"gutters": true,
+							"modulesPerRow": 3,
+							"numberOfColumns": 3,
+							"reverseOrder": false,
+							"rowViewports": [
+								{
+									"id": "landscapeMobile",
+									"rowViewportDefinition": {
+										"modulesPerRow": 1
+									}
+								},
+								{
+									"id": "portraitMobile",
+									"rowViewportDefinition": {
+										"modulesPerRow": 1
+									}
+								},
+								{
+									"id": "tablet",
+									"rowViewportDefinition": {
+										"modulesPerRow": 1
+									}
+								}
+							],
+							"verticalAlignment": "top"
+						},
+						"pageElements": [
+							{
+								"type": "Column",
+								"definition": {
+									"size": 4
+								},
+								"pageElements": [
+									{
+										"type": "Fragment",
+										"definition": {
+											"fragment": {
+												"key": "kaffora-product-card"
+											},
+											"fragmentConfig": {},
+											"fragmentFields": [
+												{
+													"id": "card-image",
+													"value": {
+														"fragmentImage": {
+															"description": {
+																"value_i18n": {
+																	"en_US": ""
+																}
+															},
+															"url": {
+																"value_i18n": {
+																	"en_US": "[$DOCUMENT_URL:/site-initializer/documents/group/coffee-cerrado.jpg$]"
+																}
+															}
+														},
+														"fragmentLink": {
+															"value_i18n": {}
+														}
+													}
+												},
+												{
+													"id": "meta",
+													"value": {
+														"fragmentLink": {
+															"value_i18n": {}
+														},
+														"text": {
+															"value_i18n": {
+																"en_US": "250 g · from €14"
+															}
+														}
+													}
+												},
+												{
+													"id": "title",
+													"value": {
+														"fragmentLink": {
+															"value_i18n": {}
+														},
+														"text": {
+															"value_i18n": {
+																"en_US": "Brazil Cerrado Mineiro"
+															}
+														}
+													}
+												},
+												{
+													"id": "text",
+													"value": {
+														"fragmentLink": {
+															"value_i18n": {}
+														},
+														"text": {
+															"value_i18n": {
+																"en_US": "Chocolate, hazelnut and a round, sweet body. Our everyday espresso."
+															}
+														}
+													}
+												},
+												{
+													"id": "link",
+													"value": {
+														"fragmentLink": {
+															"value_i18n": {
+																"en_US": {
+																	"href": {
+																		"value": "/coffees"
+																	},
+																	"target": "Self"
+																}
+															}
+														},
+														"text": {
+															"value_i18n": {
+																"en_US": "Read more"
+															}
+														}
+													}
+												}
+											]
+										}
+									}
+								]
+							},
+							{
+								"type": "Column",
+								"definition": {
+									"size": 4
+								},
+								"pageElements": [
+									{
+										"type": "Fragment",
+										"definition": {
+											"fragment": {
+												"key": "kaffora-product-card"
+											},
+											"fragmentConfig": {},
+											"fragmentFields": [
+												{
+													"id": "card-image",
+													"value": {
+														"fragmentImage": {
+															"description": {
+																"value_i18n": {
+																	"en_US": ""
+																}
+															},
+															"url": {
+																"value_i18n": {
+																	"en_US": "[$DOCUMENT_URL:/site-initializer/documents/group/coffee-yirgacheffe.jpg$]"
+																}
+															}
+														},
+														"fragmentLink": {
+															"value_i18n": {}
+														}
+													}
+												},
+												{
+													"id": "meta",
+													"value": {
+														"fragmentLink": {
+															"value_i18n": {}
+														},
+														"text": {
+															"value_i18n": {
+																"en_US": "250 g · from €18"
+															}
+														}
+													}
+												},
+												{
+													"id": "title",
+													"value": {
+														"fragmentLink": {
+															"value_i18n": {}
+														},
+														"text": {
+															"value_i18n": {
+																"en_US": "Ethiopia Yirgacheffe"
+															}
+														}
+													}
+												},
+												{
+													"id": "text",
+													"value": {
+														"fragmentLink": {
+															"value_i18n": {}
+														},
+														"text": {
+															"value_i18n": {
+																"en_US": "Jasmine, bergamot and lemon. Bright and tea-like, made for filter."
+															}
+														}
+													}
+												},
+												{
+													"id": "link",
+													"value": {
+														"fragmentLink": {
+															"value_i18n": {
+																"en_US": {
+																	"href": {
+																		"value": "/coffees"
+																	},
+																	"target": "Self"
+																}
+															}
+														},
+														"text": {
+															"value_i18n": {
+																"en_US": "Read more"
+															}
+														}
+													}
+												}
+											]
+										}
+									}
+								]
+							},
+							{
+								"type": "Column",
+								"definition": {
+									"size": 4
+								},
+								"pageElements": [
+									{
+										"type": "Fragment",
+										"definition": {
+											"fragment": {
+												"key": "kaffora-product-card"
+											},
+											"fragmentConfig": {},
+											"fragmentFields": [
+												{
+													"id": "card-image",
+													"value": {
+														"fragmentImage": {
+															"description": {
+																"value_i18n": {
+																	"en_US": ""
+																}
+															},
+															"url": {
+																"value_i18n": {
+																	"en_US": "[$DOCUMENT_URL:/site-initializer/documents/group/coffee-huila.jpg$]"
+																}
+															}
+														},
+														"fragmentLink": {
+															"value_i18n": {}
+														}
+													}
+												},
+												{
+													"id": "meta",
+													"value": {
+														"fragmentLink": {
+															"value_i18n": {}
+														},
+														"text": {
+															"value_i18n": {
+																"en_US": "250 g · from €16"
+															}
+														}
+													}
+												},
+												{
+													"id": "title",
+													"value": {
+														"fragmentLink": {
+															"value_i18n": {}
+														},
+														"text": {
+															"value_i18n": {
+																"en_US": "Colombia Huila"
+															}
+														}
+													}
+												},
+												{
+													"id": "text",
+													"value": {
+														"fragmentLink": {
+															"value_i18n": {}
+														},
+														"text": {
+															"value_i18n": {
+																"en_US": "Red apple, panela and caramel with a juicy finish."
+															}
+														}
+													}
+												},
+												{
+													"id": "link",
+													"value": {
+														"fragmentLink": {
+															"value_i18n": {
+																"en_US": {
+																	"href": {
+																		"value": "/coffees"
+																	},
+																	"target": "Self"
+																}
+															}
+														},
+														"text": {
+															"value_i18n": {
+																"en_US": "Read more"
+															}
+														}
+													}
+												}
+											]
+										}
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"type": "Fragment",
+				"definition": {
+					"fragment": {
+						"key": "kaffora-footer"
+					},
+					"fragmentConfig": {},
+					"fragmentFields": []
+				}
+			}
+		]
+	}
+}

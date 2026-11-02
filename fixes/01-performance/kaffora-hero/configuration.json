@@ -1,0 +1,29 @@
+{
+  "fieldSets": [
+    {
+      "label": "Performance",
+      "fields": [
+        {
+          "name": "imagePriority",
+          "label": "Roastery image priority (fetchpriority)",
+          "description": "Set High only on the LCP image (the largest image above the fold).",
+          "type": "select",
+          "dataType": "string",
+          "defaultValue": "auto",
+          "typeOptions": {
+            "validValues": [
+              {
+                "label": "Auto",
+                "value": "auto"
+              },
+              {
+                "label": "High (LCP image)",
+                "value": "high"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

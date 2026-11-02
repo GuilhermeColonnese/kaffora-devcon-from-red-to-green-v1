@@ -1,0 +1,64 @@
+{
+	"fieldSets": [
+		{
+			"label": "Structured data",
+			"fields": [
+				{
+					"dataType": "string",
+					"defaultValue": "Store",
+					"label": "Schema.org type",
+					"name": "schemaType",
+					"type": "select",
+					"typeOptions": {
+						"validValues": [
+							{
+								"value": "Store"
+							},
+							{
+								"value": "Organization"
+							},
+							{
+								"value": "LocalBusiness"
+							}
+						]
+					}
+				},
+				{
+					"dataType": "string",
+					"defaultValue": "Kaffora Coffee",
+					"label": "Name",
+					"name": "orgName",
+					"type": "text"
+				},
+				{
+					"dataType": "string",
+					"defaultValue": "Single-origin specialty coffee, roasted weekly and delivered in 48 hours.",
+					"label": "Description",
+					"name": "orgDescription",
+					"type": "text"
+				},
+				{
+					"dataType": "string",
+					"defaultValue": "http://kaffora.localhost:8080/",
+					"label": "Canonical site URL",
+					"name": "orgUrl",
+					"type": "text"
+				},
+				{
+					"dataType": "string",
+					"defaultValue": "http://kaffora.localhost:8080/logo.png",
+					"label": "Logo URL",
+					"name": "logoUrl",
+					"type": "text"
+				},
+				{
+					"dataType": "string",
+					"defaultValue": "+55 11 0000-0000",
+					"label": "Telephone",
+					"name": "telephone",
+					"type": "text"
+				}
+			]
+		}
+	]
+}

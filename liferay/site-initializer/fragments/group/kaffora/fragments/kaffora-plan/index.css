@@ -1,0 +1,111 @@
+:root {
+	--kaffora-navy: #07082B;
+	--kaffora-surface: #13153A;
+	--kaffora-line: #3A3D78;
+	--kaffora-purple: #7B1FFF;
+	--kaffora-magenta: #E4169B;
+	--kaffora-gradient: linear-gradient(100deg, #07082B 0%, #1B0B5E 40%, #6A12D6 72%, #C21BC0 100%);
+}
+.kaffora-btn {
+	background: var(--primary, #C2107F);
+	border: 0;
+	border-radius: 8px;
+	color: #FFFFFF;
+	display: inline-block;
+	font-family: var(--font-family-base, system-ui, sans-serif);
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 1.2;
+	padding: 0.7rem 1.5rem;
+	text-decoration: none;
+}
+
+.kaffora-btn:hover,
+.kaffora-btn:focus-visible {
+	color: #FFFFFF;
+	filter: brightness(1.1);
+	text-decoration: none;
+}
+
+.kaffora-btn--light {
+	background: #FFFFFF;
+	color: var(--primary, #C2107F);
+}
+
+.kaffora-btn--light:hover,
+.kaffora-btn--light:focus-visible {
+	color: var(--primary, #C2107F);
+}
+.kaffora-plan {
+	background: var(--kaffora-navy);
+	color: #FFFFFF;
+	font-family: var(--font-family-base, system-ui, sans-serif);
+	padding: 3.5rem 1.25rem;
+	text-align: center;
+}
+
+.kaffora-plan__inner {
+	margin: 0 auto;
+	max-width: 820px;
+}
+
+.kaffora-plan__title {
+	font-size: 2rem;
+	font-weight: 700;
+	margin: 0 0 1rem;
+}
+
+.kaffora-plan__price {
+	color: var(--brand-color-1, #FF5CCB);
+	font-family: var(--font-family-monospace, ui-monospace, monospace);
+	font-size: 3rem;
+	font-weight: 800;
+	line-height: 1;
+	margin: 0 0 0.75rem;
+}
+
+.kaffora-plan__rate {
+	font-weight: 700;
+	margin: 0 0 0.25rem;
+}
+
+.kaffora-plan__note {
+	color: var(--secondary, #C7C9EA);
+	font-size: 0.875rem;
+	font-style: italic;
+	margin: 0 0 1.75rem;
+}
+
+.kaffora-plan__subtitle {
+	font-size: 1.25rem;
+	font-weight: 700;
+	margin: 0 0 1.5rem;
+}
+
+.kaffora-plan__grid {
+	display: grid;
+	gap: 1.25rem;
+	grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+	list-style: none;
+	margin: 0 0 1.75rem;
+	padding: 0;
+}
+
+.kaffora-plan__item {
+	background: var(--kaffora-surface);
+	border: 1px solid var(--kaffora-line);
+	border-radius: 18px;
+	padding: 1.5rem 1rem;
+}
+
+.kaffora-plan__label {
+	color: var(--brand-color-1, #FF5CCB);
+	font-size: 0.875rem;
+	font-weight: 700;
+	margin: 0 0 0.75rem;
+}
+
+.kaffora-plan__text {
+	font-size: 0.9375rem;
+	margin: 0;
+}

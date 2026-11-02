@@ -1,0 +1,29 @@
+[
+  {
+    "externalReferenceCode": "KAFFORA-CERRADO",
+    "name": "Brazil Cerrado Mineiro",
+    "origin": "Cerrado Mineiro, Brazil",
+    "notes": "Chocolate, hazelnut and a round, sweet body. Our everyday espresso.",
+    "price": 14,
+    "weight": "250 g",
+    "image": "coffee-cerrado"
+  },
+  {
+    "externalReferenceCode": "KAFFORA-YIRGACHEFFE",
+    "name": "Ethiopia Yirgacheffe",
+    "origin": "Yirgacheffe, Ethiopia",
+    "notes": "Jasmine, bergamot and lemon. Bright and tea-like, made for filter.",
+    "price": 18,
+    "weight": "250 g",
+    "image": "coffee-yirgacheffe"
+  },
+  {
+    "externalReferenceCode": "KAFFORA-HUILA",
+    "name": "Colombia Huila",
+    "origin": "Huila, Colombia",
+    "notes": "Red apple, panela and caramel with a juicy finish.",
+    "price": 16,
+    "weight": "250 g",
+    "image": "coffee-huila"
+  }
+]
